@@ -1,0 +1,30 @@
+﻿@model baitapbuoi6.Models.Phone
+@{
+    ViewData["Title"] = "Sửa thông tin";
+}
+
+<h2>Sửa thông tin điện thoại</h2>
+<form asp-action="Edit" method="post" style="max-width:400px;">
+    <input type="hidden" asp-for="Id" /> <div class="mb-3">
+    <label asp-for="ModelName">Tên máy</label>
+    <input asp-for="ModelName" class="form-control" />
+    <span asp-validation-for="ModelName" class="text-danger"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Brand">Hãng sản xuất</label>
+    <input asp-for="Brand" class="form-control" />
+    <span asp-validation-for="Brand" class="text-danger"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Price">Giá ($)</label>
+    <input asp-for="Price" type="number" step="0.01" class="form-control" />
+    <span asp-validation-for="Price" class="text-danger"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Stock">Số lượng</label>
+    <input asp-for="Stock" type="number" class="form-control" />
+    <span asp-validation-for="Stock" class="text-danger"></span>
+</div>
+<button type="submit" class="btn btn-warning">Lưu thay đổi</button>
+<a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

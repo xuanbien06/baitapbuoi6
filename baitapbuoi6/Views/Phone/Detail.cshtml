@@ -1,0 +1,14 @@
+﻿@model baitapbuoi6.Models.Phone
+@{
+    ViewData["Title"] = "Chi tiết";
+}
+
+<h2>Chi tiết điện thoại</h2>
+<ul class="list-group mb-3">
+    <li class="list-group-item"><strong>ID:</strong> @Model.Id</li>
+    <li class="list-group-item"><strong>Tên máy:</strong> @Model.ModelName</li>
+    <li class="list-group-item"><strong>Hãng:</strong> @Model.Brand</li>
+    <li class="list-group-item"><strong>Giá:</strong> $@Model.Price</li>
+    <li class="list-group-item"><strong>Số lượng:</strong> @Model.Stock</li>
+</ul>
+<a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
